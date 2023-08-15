@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
 cmake_policy(VERSION 3.2)
 
 
@@ -35,7 +35,7 @@ if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
 
 endif(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
 
-if (NOT TARGET uninstall)
+if (GLM_GENERATE_UNINSTALL AND NOT TARGET uninstall)
 configure_file(cmake/cmake_uninstall.cmake.in
                cmake_uninstall.cmake IMMEDIATE @ONLY)
 
